@@ -2,9 +2,9 @@
   "name": "movement",
   "version": "1.0.0",
   "description": "lib JQuery to move HTML elements by window scroll position",
-  "main": "index.js",
+  "main": "/dist/movement.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "/test/movement.html"
   },
   "keywords": [
     "parallax",
@@ -14,5 +14,15 @@
     "JQuery"
   ],
   "author": "Marcelo Francisco <marcdfranc@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-terser": "^1.2.0",
+    "qunit": "^2.9.3"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
