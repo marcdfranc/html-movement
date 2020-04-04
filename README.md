@@ -10,7 +10,7 @@ Place the code below on the page load and change the properties as needed.
 ``` javascript code
 $.movement({
   properties: [
-    // anoimate DOM 1
+    // Aimate DOM 1
     {
       selector: '#man',
       start_time: 424,
