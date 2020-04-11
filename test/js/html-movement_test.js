@@ -15,7 +15,6 @@ QUnit.test("Square at position x",  function (assert) {
 				start_time: 0,
 				end_time: 1348,
 				name: 'left',
-				// type: 'ease-out-cubic',
 				type: 'linear',
 				start_value: 0,
 				end_value: 380,

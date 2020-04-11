@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Movement Test</title>  
+  <link rel="stylesheet" href="../node_modules/qunit/qunit/qunit.css">
+</head>
+<body>
+
+  <div class="test-content" style="position: fixed; width: 100%;">
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="../node_modules/qunit/qunit/qunit.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../dist/html-movement.js" data-cover></script>
+    <script src="js/html-movement_test.js"></script>
+    <script src="../bower_components/blanket/dist/qunit/blanket.min.js"></script>
+
+    <div id="object" style="background: red; width: 30px; height: 30px; position: relative;"></div>
+  </div>
+
+  <div id="content" style="width: 100%; height: 2000px;">
+  </div>
+
+</body>
+</html>

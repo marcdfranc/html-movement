@@ -1,31 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>QUnit Movement Test</title>  
-  <link rel="stylesheet" href="../node_modules/qunit/qunit/qunit.css">
-</head>
-<body>
-
-  <div class="test-content" style="position: fixed; width: 100%;">
-    <div id="qunit"></div>
-    <div id="qunit-fixture"></div>
-    <script src="../node_modules/qunit/qunit/qunit.js"></script>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../dist/movement.js" data-cover></script>
-    <script src="js/movement_test.js"></script>
-    <script src="../bower_components/blanket/dist/qunit/blanket.min.js"></script>
-
-    <div id="object" style="background: red; width: 30px; height: 30px; position: relative;"></div>
-  </div>
-
-  <div id="content" style="width: 100%; height: 2000px;">
-  </div>
-
-</body>
-</html>
-
-
 jQuery.movement = function (settings) {
 
 	var options = $.extend({
@@ -45,7 +17,7 @@ jQuery.movement = function (settings) {
 
 	$(window).scroll(function (e) {
 		options.properties.forEach(property => {
-			
+
 			property.curse = property.end_value - property.start_value;
 			property.duration = property.end_time - property.start_time;
 			if ($(window).scrollTop() >= property.start_time && $(window).scrollTop() <= property.end_time) {
@@ -370,66 +342,3 @@ $.fn.movement = function (settings) {
         properties: propertiesItens
     });
 };
-
-
-
-
-/**s
- * Use cases
- $(function (e) {
-
-	 $.movement({
-		 properties: [
-			 {
-				 selector: '#man',
-				 start_time: 424,
-				 end_time: 757,
-				 name: 'left',
-				 // type: 'ease-out-cubic',
-				 type: 'ease-out-back',
-				 start_value: 20,
-				 end_value: 50,
-				 elastic_coeficient_in: 1.5,
-				 elastic_coeficient_out: 5.5,
-				 unit: '%'
-				},
-				{
-					selector: '#man',
-					start_time: 424,
-					end_time: 757,
-					name: 'bottom',
-					type: 'ease-out-back',
-					elastic_coeficient_out: 3,
-					start_value: 110,
-					end_value: 240,
-					unit: 'px'
-				}
-			]
-		});
-
-		$('#man').movement({
-			properties: [
-				{
-					name: 'left',
-					type: 'ease-out-cubic',
-					start_value: 20,
-					end_value: 50,
-					elastic_coeficient_in: 1.5,
-					elastic_coeficient_out: 5.5,
-					unit: '%'
-				},
-				{
-					name: 'bottom',
-					type: 'ease-out-back',
-					elastic_coeficient_out: 3,
-					start_value: 110,
-					end_value: 240,
-					unit: 'px'
-				}
-			],
-			start_time: 424,
-			end_time: 757
-		});
-	});
-
-	*/

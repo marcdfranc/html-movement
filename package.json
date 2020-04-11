@@ -1,10 +1,14 @@
 {
-  "name": "movement",
-  "version": "1.0.0",
+  "name": "html-movement",
+  "version": "0.0.2",
   "description": "lib JQuery to move HTML elements by window scroll position",
   "main": "/dist/movement.js",
   "scripts": {
-    "test": "/test/movement.html"
+    "test": "/test/js/html-movement_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/marcdfranc/html-movement.git"
   },
   "keywords": [
     "parallax",
